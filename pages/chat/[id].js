@@ -25,7 +25,7 @@ function Chat({ messages, chat }) {
 
 export default Chat
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const ref = db.collection('chats').doc(context.query.id)
 
   // PREP msg on server
